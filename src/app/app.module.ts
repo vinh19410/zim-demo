@@ -11,12 +11,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+import { DialogDetailComponent } from './dialog/dialog-detail.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DialogDetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxChartsModule,
     BrowserAnimationsModule,
     HttpClientModule,
 
@@ -26,6 +34,10 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatProgressSpinnerModule,
   ],
   providers: [AppService],
   bootstrap: [AppComponent],

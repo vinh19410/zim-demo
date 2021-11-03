@@ -11,11 +11,10 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "types": ["node"],
+    "typeRoots": ["..node_modules/@type"],
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "lib": ["es2018", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false

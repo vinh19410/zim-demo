@@ -34,7 +34,11 @@
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    <tr
+      mat-row
+      (click)="clickedRows(row)"
+      *matRowDef="let row; columns: displayedColumns"
+    ></tr>
   </table>
 
   <mat-paginator
@@ -42,4 +46,7 @@
     showFirstLastButtons
     aria-label="Select page of users"
   ></mat-paginator>
+</div>
+<div *ngIf="isShow" class="loader">
+  <mat-spinner></mat-spinner>
 </div>

@@ -18,4 +18,12 @@ export class AppService {
     //let API_URL = "https://api.covid19api.com/summary";
     return this.http.get('https://api.covid19api.com/summary');
   }
+
+  getDetailCountry(slug: string): Observable<any> {
+    return this.http.get('https://restcountries.com/v3.1/name/' + slug);
+  }
+
+  getDetailCovid(slug: string): Observable<any> {
+    return this.http.get('https://api.covid19api.com/country/' + slug);
+  }
 }
